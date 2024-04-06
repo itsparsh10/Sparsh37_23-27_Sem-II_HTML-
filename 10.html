@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country and Capital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 213, 0);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h3 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .country-label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .capital {
+            font-size: 20px;
+            color: blue;
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        input[type="radio"]:checked + label:before {
+            content: "✔";
+            font-size: 18px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+        input[type="radio"] + label .capital {
+            display: none;
+        }
+
+        input[type="radio"]:checked + label .capital {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Countries and their capitals</h1>
+    <h3>Select a country to display its capital</h3>
+    <div>
+        <input type="radio" name="country" id="USA" value="USA" />
+        <label for="USA" class="country-label">
+            United States
+            <span class="capital">Washington, D.C.</span>
+        </label>
+    </div>
+    <div>
+        <input type="radio" name="country" id="Canada" value="Canada" />
+        <label for="Canada" class="country-label">
+            Canada
+            <span class="capital">Ottawa</span>
+        </label>
+    </div>
+    <div>
+        <input type="radio" name="country" id="Australia" value="Australia" />
+        <label for="Australia" class="country-label">
+            Australia
+            <span class="capital">Canberra</span>
+        </label>
+    </div>
+    <div>
+        <input type="radio" name="country" id="India" value="India" />
+        <label for="India" class="country-label">
+            India
+            <span class="capital">New Delhi</span>
+        </label>
+    </div>
+    <div>
+        <input type="radio" name="country" id="Germany" value="Germany" />
+        <label for="Germany" class="country-label">
+            Germany
+            <span class="capital">Berlin</span>
+        </label>
+    </div>
+</body>
+</html>
